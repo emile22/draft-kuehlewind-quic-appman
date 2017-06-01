@@ -203,7 +203,7 @@ packet re-ordering.
 
 [Editor's note: say something about greasing if added to the transport draft]
 
-# Troubleshooting between administrative entities 
+# Interdomain UX troubleshooting 
 
 Interdomain UX troubleshooting is a design concern identified in https://github.com/quicwg/base-drafts/issues/166.
 Troubleshooting is the act of identifying the origin of a problem. A major case is the localization of troubles impacting an important number of customers. This case becomes critical when it appears suddenly and represents a noticeable part of the traffic between the entity which connects the customers (ISP) and the entity which provides the data (APP). It becomes critical because the NOC teams of the two entities are expected to immediately identify the causes in order to restore UX as quickly as possible. Typical point of failures are line cards memory errors or overloaded or miss-configured components located somewhere on the path. Each team locates the point of failure by dichotomy using passive monitoring of packet lost and congestion. Each team checks that the point of failure is either in their entity or outside. In the first situation they investigate their own chains of components (network, routers, reverse proxies,...) and quickly fix the issue. The duration of the second situation is far longer and unpredictable because it expects other entities on the path to perform the same actions on their segments.
